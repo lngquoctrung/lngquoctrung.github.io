@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="vi" data-color-scheme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ly Nguyen Quoc Trung - AI Engineer & Data Engineer</title>
+    <meta name="description" content="Ly Nguyen Quoc Trung - AI Engineer chuyên về Machine Learning, Deep Learning, Computer Vision và Data Engineering">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-text">LQT.AI</a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                <li><a href="#projects" class="nav-link">Dự án</a></li>
+                <li><a href="#experience" class="nav-link">Kinh nghiệm</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Chuyển đổi theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-text">
+                    <span class="greeting">Xin chào, tôi là</span>
+                    <h1 class="name-highlight">Ly Nguyen Quoc Trung</h1>
+                    <h2 class="hero-title">
+                        <span class="typing-text">AI Engineer & Data Engineer</span>
+                    </h2>
+                    <p class="hero-description">
+                        Sinh viên năm cuối ngành Computer Science tại Đại học Tôn Đức Thắng với kinh nghiệm thực tế trong Machine Learning, Deep Learning, Computer Vision và Data Engineering. Đam mê xây dựng các giải pháp AI và phân tích dữ liệu để giải quyết các vấn đề thực tế.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn--primary btn--lg">
+                            <i class="fas fa-code"></i>
+                            Xem dự án
+                        </a>
+                        <a href="#contact" class="btn btn--secondary btn--lg">
+                            <i class="fas fa-envelope"></i>
+                            Liên hệ
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar-container">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-indicator">
+                <span class="scroll-text">Khám phá thêm</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Giới thiệu</h2>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-description">
+                        Tôi là Ly Nguyen Quoc Trung, sinh viên năm cuối ngành Computer Science tại Đại học Tôn Đức Thắng với GPA 7.71/10. 
+                        Hiện tại đang công tác tại ALCHERA Việt Nam với vị trí Data Engineer chuyên về xử lý ảnh và video.
+                    </p>
+                    
+                    <p class="about-description">
+                        Với kinh nghiệm thực tế trong phát triển các mô hình Machine Learning và Deep Learning, tôi đã thực hiện nhiều dự án 
+                        từ Computer Vision, Natural Language Processing đến các hệ thống phân tích dữ liệu. Tôi đam mê nghiên cứu các 
+                        công nghệ AI mới nhất và ứng dụng chúng vào giải quyết các vấn đề thực tế.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Dự án hoàn thành</span>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Năm kinh nghiệm</span>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Công nghệ thành thạo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-grid" data-aos="fade-left">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong>Họ tên:</strong> Ly Nguyen Quoc Trung
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong> lngquoctrung@gmail.com
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Điện thoại:</strong> +84 961.948.967
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Địa chỉ:</strong> TP. Hồ Chí Minh, Việt Nam
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <strong>Học vấn:</strong> Computer Science - Tôn Đức Thắng University
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <strong>Vị trí:</strong> Data Engineer - ALCHERA Vietnam
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Kỹ năng chuyên môn</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Ngôn ngữ lập trình
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i>
+                        AI/ML Frameworks
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PyTorch</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TensorFlow</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Scikit-learn</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HuggingFace</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i>
+                        Databases & Tools
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="category-title">
+                        <i class="fas fa-chart-line"></i>
+                        Data Analysis
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Pandas</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">NumPy</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Matplotlib</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Dự án nổi bật</h2>
+            
+            <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+                <button class="filter-btn" data-filter="nlp">NLP</button>
+                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                <button class="filter-btn" data-filter="web-development">Web Development</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- License Plate Detection System -->
+                <div class="project-card featured" data-category="computer-vision" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/lngquoctrung" class="project-link" title="Xem demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/lngquoctrung/vehicle-license-plate-recognition" class="project-link" title="Mã nguồn">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Computer Vision</span>
+                        <h3 class="project-title">License Plate Detection System</h3>
+                        <p class="project-description">
+                            Hệ thống nhận diện biển số xe từ ảnh và video sử dụng mô hình FasterRCNN. 
+                            Ứng dụng Computer Vision và Deep Learning để phát hiện và nhận diện biển số xe với độ chính xác cao.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">FasterRCNN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neural Machine Translation -->
+                <div class="project-card" data-category="nlp" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/lngquoctrung" class="project-link" title="Xem demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/lngquoctrung/machine-translation-bilstm-lstm" class="project-link" title="Mã nguồn">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">NLP</span>
+                        <h3 class="project-title">English-Vietnamese Neural Machine Translation</h3>
+                        <p class="project-description">
+                            Hệ thống dịch máy từ tiếng Anh sang tiếng Việt sử dụng mô hình BiLSTM với cơ chế Attention. 
+                            Xây dựng từ đầu với kiến trúc sequence-to-sequence cho việc dịch văn bản.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">BiLSTM</span>
+                            <span class="tech-tag">Attention</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diabetes Prediction -->
+                <div class="project-card" data-category="machine-learning" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/lngquoctrung" class="project-link" title="Xem demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/lngquoctrung/diabetes-prediction-machine-learning" class="project-link" title="Mã nguồn">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Machine Learning</span>
+                        <h3 class="project-title">Diabetes Prediction System</h3>
+                        <p class="project-description">
+                            Hệ thống dự đoán bệnh tiểu đường sử dụng dữ liệu BRFSS 2021. 
+                            Ứng dụng các thuật toán Machine Learning để phân loại và dự đoán nguy cơ mắc bệnh tiểu đường.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Random Forest</span>
+                            <span class="tech-tag">SMOTE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LifeHub Social Platform -->
+                <div class="project-card" data-category="web-development" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/lngquoctrung" class="project-link" title="Xem demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/lngquoctrung/social-blogger" class="project-link" title="Mã nguồn">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Development</span>
+                        <h3 class="project-title">LifeHub - Social Blogging Platform</h3>
+                        <p class="project-description">
+                            Nền tảng blog xã hội cho phép người dùng tạo, chia sẻ bài viết và tương tác. 
+                            Xây dựng RESTful APIs, quản lý người dùng và hệ thống bình luận real-time.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Kinh nghiệm làm việc</h2>
+            
+            <div class="timeline">
+                <!-- ALCHERA Vietnam -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-date">08/2024 - Hiện tại</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Data Engineer</h3>
+                        <h4 class="timeline-company">ALCHERA Việt Nam</h4>
+                        <p class="timeline-description">
+                            Chuyên về Data Engineering trong lĩnh vực xử lý ảnh và video, phát triển các pipeline 
+                            xử lý dữ liệu multimedia và tối ưu hóa hiệu suất cho các hệ thống AI/ML.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Phát triển và duy trì các pipeline xử lý dữ liệu ảnh và video quy mô lớn</li>
+                            <li>Tối ưu hóa thuật toán xử lý multimedia để cải thiện hiệu suất hệ thống</li>
+                            <li>Xây dựng hệ thống ETL cho dữ liệu multimedia từ nhiều nguồn khác nhau</li>
+                            <li>Phối hợp với team AI để triển khai các mô hình computer vision vào production</li>
+                            <li>Thiết kế và triển khai giải pháp lưu trữ và truy xuất dữ liệu multimedia hiệu quả</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education & Certifications -->
+            <div class="education-certs">
+                <div data-aos="fade-right">
+                    <h3 class="subsection-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Học vấn
+                    </h3>
+                    
+                    <div class="education-item">
+                        <h4>Master of Science in Computer Science</h4>
+                        <div class="education-school">Đại học Tôn Đức Thắng, TP. Hồ Chí Minh</div>
+                        <div class="education-details">Đang học - Dự kiến tốt nghiệp: Tháng 4/2026</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h4>Bachelor of Science in Computer Science</h4>
+                        <div class="education-school">Đại học Tôn Đức Thắng, TP. Hồ Chí Minh</div>
+                        <div class="education-details">GPA: 7.71/10 - Dự kiến tốt nghiệp: Tháng 12/2025</div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="subsection-title">
+                        <i class="fas fa-certificate"></i>
+                        Chuyên môn
+                    </h3>
+                    
+                    <div class="cert-grid">
+                        <div class="cert-item">Machine Learning & Deep Learning</div>
+                        <div class="cert-item">Computer Vision</div>
+                        <div class="cert-item">Natural Language Processing</div>
+                        <div class="cert-item">Data Engineering & Analysis</div>
+                        <div class="cert-item">Backend Development</div>
+                        <div class="cert-item">Containerization với Docker</div>
+                        <div class="cert-item">RESTful API Development</div>
+                        <div class="cert-item">Database Management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Liên hệ với tôi</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Hãy kết nối cùng nhau!</h3>
+                    <p>
+                        Tôi luôn sẵn sàng thảo luận về các dự án AI/ML mới, cơ hội hợp tác, 
+                        hoặc chỉ đơn giản là chia sẻ về công nghệ. Hãy liên hệ nhé!
+                    </p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong>
+                            <a href="mailto:lngquoctrung@gmail.com">lngquoctrung@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Điện thoại:</strong>
+                            <a href="tel:+84961948967">+84 961.948.967</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Địa chỉ:</strong>
+                            TP. Hồ Chí Minh, Việt Nam
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/lngquoctrung/" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/lngquoctrung" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:lngquoctrung@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+84961948967" class="social-link" title="Điện thoại">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Họ và tên *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Chủ đề *</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Tin nhắn *</label>
+                        <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        <i class="fas fa-paper-plane"></i>
+                        Gửi tin nhắn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ly Nguyen Quoc Trung. Được thiết kế với ❤️ và ☕</p>
+                <p>AI Engineer & Data Engineer</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Về đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
