@@ -148,7 +148,7 @@ function initNavigation() {
             // Close mobile menu
             if (navMenu) navMenu.classList.remove('active');
             if (navToggle) navToggle.classList.remove('active');
-
+            
             // Get target section
             const targetId = this.getAttribute('href');
             if (targetId && targetId.startsWith('#')) {
@@ -190,7 +190,7 @@ function initNavigation() {
         let current = '';
         const sections = document.querySelectorAll('section[id]');
         const scrollPos = window.pageYOffset + 100;
-
+        
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
@@ -227,7 +227,7 @@ function initTypingAnimation() {
     const titles = [
         'AI Engineer & Data Engineer',
         'Computer Vision Specialist',
-        'Machine Learning Developer', 
+        'Machine Learning Developer',
         'Deep Learning Expert',
         'Data Engineering Expert'
     ];
@@ -238,7 +238,7 @@ function initTypingAnimation() {
 
     function typeTitle() {
         const currentTitle = titles[currentTitleIndex];
-
+        
         if (isDeleting) {
             typingElement.textContent = currentTitle.substring(0, currentCharIndex - 1);
             currentCharIndex--;
@@ -281,7 +281,7 @@ function initThemeToggle() {
         e.preventDefault();
         const currentTheme = html.getAttribute('data-color-scheme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
+        
         html.setAttribute('data-color-scheme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
@@ -336,17 +336,8 @@ function initSkillBars() {
 function initProjectFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
-
+    
     if (filterButtons.length === 0 || projectCards.length === 0) return;
-
-    // Set up filter mapping
-    const filterMap = {
-        'all': 'all',
-        'computer-vision': 'computer-vision',
-        'nlp': 'nlp',
-        'machine-learning': 'machine-learning',
-        'web-development': 'web-development'
-    };
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function(e) {
@@ -412,19 +403,19 @@ function initContactForm() {
         // Validation
         const errors = validateForm({ name, email, subject, message });
         if (errors.length > 0) {
-            showNotification(errors.join('<br>'), 'error');
+            showNotification(errors.join(', '), 'error');
             return;
         }
 
         // Show loading state
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.innerHTML;
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang gửi...';
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitButton.disabled = true;
 
         // Simulate form submission
         setTimeout(() => {
-            showNotification('Cảm ơn bạn đã liên hệ! Tôi sẽ phản hồi sớm nhất có thể.', 'success');
+            showNotification('Thank you for contacting me! I will respond as soon as possible.', 'success');
             contactForm.reset();
             
             // Reset button
@@ -435,14 +426,14 @@ function initContactForm() {
 
     function validateForm({ name, email, subject, message }) {
         const errors = [];
-
-        if (!name) errors.push('Vui lòng nhập họ và tên');
-        if (!email) errors.push('Vui lòng nhập email');
-        else if (!isValidEmail(email)) errors.push('Email không hợp lệ');
-        if (!subject) errors.push('Vui lòng nhập chủ đề');
-        if (!message) errors.push('Vui lòng nhập tin nhắn');
-        if (message.length < 10) errors.push('Tin nhắn quá ngắn (tối thiểu 10 ký tự)');
-
+        
+        if (!name) errors.push('Please enter your full name');
+        if (!email) errors.push('Please enter your email');
+        else if (!isValidEmail(email)) errors.push('Invalid email address');
+        if (!subject) errors.push('Please enter a subject');
+        if (!message) errors.push('Please enter a message');
+        if (message.length < 10) errors.push('Message is too short (minimum 10 characters)');
+        
         return errors;
     }
 
@@ -486,7 +477,6 @@ function showNotification(message, type) {
         info: '#00D4FF',
         warning: '#E6815F'
     };
-
     notification.style.backgroundColor = colors[type] || colors.info;
 
     // Add to DOM
@@ -682,7 +672,7 @@ document.head.appendChild(style);
 // Error handling
 window.addEventListener('error', function(e) {
     console.error('JavaScript error:', e.error);
-    showNotification('Đã xảy ra lỗi. Vui lòng thử lại.', 'error');
+    showNotification('An error occurred. Please try again.', 'error');
 });
 
 // Console welcome message
