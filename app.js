@@ -336,46 +336,48 @@ function initProjectFilters() {
     const projectCards = document.querySelectorAll('.project-card');
     
     if (filterButtons.length === 0 || projectCards.length === 0) return;
-
+    
     filterButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const filterValue = this.getAttribute('data-filter');
-
+            
             // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-
+            
             // Filter projects with animation
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
+                
                 if (filterValue === 'all' || (category && category.includes(filterValue))) {
                     card.style.display = 'block';
                     card.classList.remove('hidden');
-                    // Hiệu ứng fade in
-                    card.style.opacity = 0;
-                    card.style.transition = 'opacity 0.3s ease';
-                    setTimeout(() => {
-                        card.style.opacity = 1;
-                    }, 100);
-                } else {
-                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    
                     card.style.opacity = '0';
-                    card.style.transform = 'translateY(-20px)';
+                    card.style.transition = 'opacity 0.3s ease';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                    }, 50);
+                } else {
+                    card.style.transition = 'opacity 0.3s ease';
+                    card.style.opacity = '0';
+                    
                     setTimeout(() => {
                         card.style.display = 'none';
                         card.classList.add('hidden');
                     }, 300);
                 }
-                });
+            });
+            
+            setTimeout(() => {
+                if (typeof AOS !== 'undefined') {
+                    AOS.refresh();
+                }
+            }, 350);
         });
     });
-
-    // Initialize with "all" filter active
-    const allButton = document.querySelector('.filter-btn[data-filter="all"]');
-    if (allButton && !allButton.classList.contains('active')) {
-        allButton.click();
-    }
 }
 
 // Contact form functionality
