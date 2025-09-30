@@ -353,20 +353,18 @@ function initProjectFilters() {
                     card.style.display = 'block';
                     card.classList.remove('hidden');
                     // Hiệu ứng fade in
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
+                    card.style.opacity = 0;
+                    card.style.transition = 'opacity 0.3s ease';
                     setTimeout(() => {
-                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
+                        card.style.opacity = 1;
                     }, 100);
                 } else {
                     card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     card.style.opacity = '0';
                     card.style.transform = 'translateY(-20px)';
                     setTimeout(() => {
-                    card.style.display = 'none';
-                    card.classList.add('hidden');
+                        card.style.display = 'none';
+                        card.classList.add('hidden');
                     }, 300);
                 }
                 });
