@@ -25,6 +25,9 @@
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- EmailJS library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Particles Background -->
@@ -70,7 +73,7 @@
                         <span class="typing-text"></span>
                     </h2>
                     <p class="hero-description">
-                        Final year Computer Science student at Ton Duc Thang University with practical experience in Machine Learning, Deep Learning, Computer Vision, and Data Engineering. Passionate about building AI solutions and data analysis to solve real-world problems.
+                        Junior AI/Data Engineer specializing in Machine Learning, Deep Learning, Computer Vision, and Data Engineering. Experienced in developing and optimizing AI/ML systems, with practical involvement in real-world projects. Passionate about building intelligent solutions to solve complex problems
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn--primary">View My Work</a>
@@ -111,10 +114,10 @@
             <div class="about-content">
                 <div data-aos="fade-right">
                     <p class="about-description">
-                        My name is Ly Nguyen Quoc Trung, a final year Computer Science student at Ton Duc Thang University with a GPA of 7.71/10. I am currently seeking new job opportunities after completing my previous role.
+                        My name is Ly Nguyen Quoc Trung, a Junior AI and Data Engineer with hands-on experience in image and video processing, machine learning model development, and data pipeline optimization. 
                     </p>
                     <p class="about-description">
-                        With practical experience developing Machine Learning and Deep Learning models, I have worked on many projects ranging from Computer Vision, Natural Language Processing to data analysis systems. I am passionate about researching the latest AI technologies and applying them to solve practical challenges.
+                        I have successfully contributed to projects involving Computer Vision, Natural Language Processing, and data analysis systems. With a strong foundation in Python, PyTorch, TensorFlow, and related AI frameworks, I am dedicated to continuous learning and applying state-of-the-art AI technologies to create impactful solutions. Currently, I am seeking new opportunities to contribute my skills to innovative AI engineering roles.
                     </p>
                     
                     <div class="about-stats">
@@ -123,7 +126,7 @@
                             <span class="stat-label">Projects</span>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                            <span class="stat-number">4+</span>
+                            <span class="stat-number">6+</span>
                             <span class="stat-label">Months Experience</span>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
@@ -335,7 +338,7 @@
             
             <div class="projects-grid">
                 <!-- License Plate Recognition -->
-                <div class="project-card featured" data-category="computer-vision" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card" data-category="computer-vision" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-car"></i>
@@ -362,6 +365,7 @@
                             <span class="tech-tag">FasterRCNN</span>
                             <span class="tech-tag">OpenCV</span>
                             <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Streamlit</span>
                         </div>
                     </div>
                 </div>
@@ -419,13 +423,14 @@
                         <span class="project-category">Machine Learning</span>
                         <h3 class="project-title">Diabetes Prediction System</h3>
                         <p class="project-description">
-                            Diabetes prediction system using BRFSS 2021 data. Applies Machine Learning algorithms to classify and predict diabetes risk.
+                            Diabetes risk prediction system based on BRFSS 2017–2021 data, using Machine Learning models such as Random Forest, XGBoost, and LightGBM. Generalization ability assessment on BRFSS 2023 data.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Scikit-learn</span>
                             <span class="tech-tag">Pandas</span>
                             <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Streamlit</span>
                         </div>
                     </div>
                 </div>
@@ -461,8 +466,9 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="300">
+                
+                <!-- Pizza Counting System -->
+                <div class="project-card" data-category="computer-vision" data-aos="fade-up" data-aos-delay="600">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-pizza-slice"></i>
@@ -480,6 +486,7 @@
                     </div>
                     
                     <div class="project-content">
+                        <span class="project-category">Computer Vision</span>
                         <h3 class="project-title">Pizza Counter System</h3>
                         <p class="project-description">
                             Automated pizza detection and counting system using YOLOv11 and Flask. Features real-time video processing, web dashboard, feedback system, and MongoDB integration for comprehensive pizza tracking.
@@ -487,24 +494,44 @@
                         
                         <div class="project-tech">
                             <span class="tech-tag">YOLOv11</span>
-                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Streamlit</span>
                             <span class="tech-tag">Computer Vision</span>
                             <span class="tech-tag">MongoDB</span>
                             <span class="tech-tag">Docker</span>
                         </div>
-                        
-                        <div class="project-stats">
-                            <span class="stat">
-                                <i class="fas fa-eye"></i>
-                                Real-time Detection
-                            </span>
-                            <span class="stat">
-                                <i class="fas fa-chart-line"></i>
-                                Auto Processing
-                            </span>
+                    </div>
+                </div>
+
+                <!-- Image Captioning ResNet50-LSTM -->
+                <div class="project-card" data-category="computer-vision nlp" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/lngquoctrung/image-captioning-resnet50-lstm" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Computer Vision</span>
+                        <span class="project-category">NLP</span>
+                        <h3 class="project-title">Image Captioning</h3>
+                        <p class="project-description">
+                            Automatic image captioning system using ResNet50 encoder for feature extraction and LSTM decoder for caption generation. Trained on MS COCO dataset to generate natural language descriptions for images.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ResNet50</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">TensorFlow</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

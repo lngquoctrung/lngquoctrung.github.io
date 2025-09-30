@@ -291,8 +291,6 @@ function initThemeToggle() {
         setTimeout(() => {
             document.body.style.transition = '';
         }, 300);
-
-        console.log('Theme switched to:', newTheme);
     });
 
     function updateThemeIcon(theme) {
@@ -343,7 +341,6 @@ function initProjectFilters() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const filterValue = this.getAttribute('data-filter');
-            console.log('Filter clicked:', filterValue);
 
             // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -352,29 +349,27 @@ function initProjectFilters() {
             // Filter projects with animation
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
-                if (filterValue === 'all' || category === filterValue) {
+                if (filterValue === 'all' || (category && category.includes(filterValue))) {
                     card.style.display = 'block';
                     card.classList.remove('hidden');
-                    // Add fade in animation
+                    // Hiệu ứng fade in
                     card.style.opacity = '0';
                     card.style.transform = 'translateY(20px)';
                     setTimeout(() => {
-                        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
+                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
                     }, 100);
                 } else {
                     card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     card.style.opacity = '0';
                     card.style.transform = 'translateY(-20px)';
                     setTimeout(() => {
-                        card.style.display = 'none';
-                        card.classList.add('hidden');
+                    card.style.display = 'none';
+                    card.classList.add('hidden');
                     }, 300);
                 }
-            });
-
-            console.log('Filtered projects for category:', filterValue);
+                });
         });
     });
 
@@ -389,40 +384,6 @@ function initProjectFilters() {
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
-
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name')?.trim() || '';
-        const email = formData.get('email')?.trim() || '';
-        const subject = formData.get('subject')?.trim() || '';
-        const message = formData.get('message')?.trim() || '';
-
-        // Validation
-        const errors = validateForm({ name, email, subject, message });
-        if (errors.length > 0) {
-            showNotification(errors.join(', '), 'error');
-            return;
-        }
-
-        // Show loading state
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitButton.disabled = true;
-
-        // Simulate form submission
-        setTimeout(() => {
-            showNotification('Thank you for contacting me! I will respond as soon as possible.', 'success');
-            contactForm.reset();
-            
-            // Reset button
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
-        }, 2000);
-    });
 
     function validateForm({ name, email, subject, message }) {
         const errors = [];
@@ -441,6 +402,46 @@ function initContactForm() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
+
+    emailjs.init({
+        publicKey: "QJd1h88cFT2d3CWya"
+    });
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const name = formData.get('name')?.trim() || '';
+        const email = formData.get('email')?.trim() || '';
+        const subject = formData.get('subject')?.trim() || '';
+        const message = formData.get('message')?.trim() || '';
+
+        const errors = validateForm({ name, email, subject, message });
+        if (errors.length > 0) {
+            showNotification(errors.join(', '), 'error');
+            return;
+        }
+
+        // Show loading state
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitButton.disabled = true;
+
+        emailjs.sendForm('email-service', 'contact-mail', contactForm)
+            .then(() => {
+                showNotification('Thank you! Your message has been sent successfully.', 'success');
+                contactForm.reset();
+            })
+            .catch((error) => {
+                console.error('EmailJS Error:', error);
+                showNotification('Failed to send message. Please try again.', 'error');
+            })
+            .finally(() => {
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            });
+    });
 }
 
 // Notification system
@@ -621,8 +622,6 @@ window.addEventListener('load', function() {
             }
         });
     }
-
-    console.log('Portfolio loaded successfully!');
 });
 
 // Handle resize events
@@ -675,16 +674,6 @@ window.addEventListener('error', function(e) {
     showNotification('An error occurred. Please try again.', 'error');
 });
 
-// Console welcome message
-console.log(`
-🚀 AI Portfolio Website Loaded Successfully!
-💻 Built with HTML, CSS & JavaScript
-🎨 Design by Ly Nguyen Quoc Trung
-🤖 AI Engineer & Data Engineer
-Contact: lngquoctrung@gmail.com
-Portfolio: Built with modern web technologies
-`);
-
 // Export functions for potential external use
 window.PortfolioAPI = {
     initParticles,
@@ -698,3 +687,16 @@ window.PortfolioAPI = {
     initScrollAnimations,
     showNotification
 };
+
+// Auto open external links in new tab
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[href^="http"]');
+    
+    links.forEach(link => {
+        // Check if link is external (not same domain)
+        if (link.hostname !== window.location.hostname) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
+});

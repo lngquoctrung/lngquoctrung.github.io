@@ -900,15 +900,15 @@ body {
 }
 
 [data-color-scheme="light"] .theme-toggle {
-    background: rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.2);
-    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #00788a;
 }
 
 [data-color-scheme="light"] .theme-toggle:hover {
-    background: rgba(0, 212, 255, 0.2);
+    background: #00d4ff;
     border-color: #00d4ff;
-    color: #00d4ff;
+    color: #fff;
 }
 
 .nav-toggle {
@@ -1919,6 +1919,13 @@ body {
     .timeline-content {
         padding: var(--space-16);
     }
+
+    .theme-toggle {
+        width: 34px;
+        height: 34px;
+        font-size: var(--font-size-base);
+        border-width: 1.5px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1960,6 +1967,13 @@ body {
 
     .contact-form {
         padding: var(--space-24);
+    }
+
+    .theme-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: var(--font-size-sm);
+        border-width: 1.5px;
     }
 }
 
