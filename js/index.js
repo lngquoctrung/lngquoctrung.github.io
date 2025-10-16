@@ -668,6 +668,129 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+function initProjectLoadMore() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (!projectsGrid) return;
+
+    const allProjects = Array.from(document.querySelectorAll('.project-card'));
+    const projectsPerLoad = 6; // Number of projects to show initially and per load
+    let currentFilter = 'all';
+    let visibleCount = projectsPerLoad;
+
+    // Create load more button
+    const loadMoreBtn = document.createElement('button');
+    loadMoreBtn.className = 'btn-load-more';
+    loadMoreBtn.innerHTML = '<i class="fas fa-chevron-down"></i> Load More Projects';
+    loadMoreBtn.style.cssText = `
+        display: none;
+        margin: 40px auto 0;
+        padding: 14px 32px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    `;
+
+    // Insert load more button after projects grid
+    projectsGrid.parentNode.insertBefore(loadMoreBtn, projectsGrid.nextSibling);
+
+    // Function to show/hide projects based on current filter and count
+    function updateProjectDisplay() {
+        let filteredProjects = allProjects;
+
+        // Filter by category
+        if (currentFilter !== 'all') {
+            filteredProjects = allProjects.filter(card => {
+                const category = card.getAttribute('data-category');
+                return category && category.includes(currentFilter);
+            });
+        }
+
+        // Hide all projects first
+        allProjects.forEach(card => {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+        });
+
+        // Show visible projects with animation
+        filteredProjects.forEach((card, index) => {
+            if (index < visibleCount) {
+                card.style.display = 'block';
+                card.classList.remove('hidden');
+                card.style.opacity = '0';
+                card.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                }, 50 * index);
+            }
+        });
+
+        // Show/hide load more button
+        if (filteredProjects.length > visibleCount) {
+            loadMoreBtn.style.display = 'block';
+            loadMoreBtn.textContent = `Load More Projects (${filteredProjects.length - visibleCount} remaining)`;
+        } else {
+            loadMoreBtn.style.display = 'none';
+        }
+
+        // Refresh AOS if available
+        setTimeout(() => {
+            if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
+        }, 100);
+    }
+
+    // Load more button click handler
+    loadMoreBtn.addEventListener('click', function() {
+        visibleCount += projectsPerLoad;
+        updateProjectDisplay();
+
+        // Smooth scroll to first newly visible project
+        const firstNewProject = document.querySelectorAll('.project-card:not(.hidden)')[visibleCount - projectsPerLoad];
+        if (firstNewProject) {
+            setTimeout(() => {
+                firstNewProject.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    });
+
+    // Update filter buttons to work with load more
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            currentFilter = this.getAttribute('data-filter');
+            visibleCount = projectsPerLoad; // Reset visible count when filter changes
+
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            updateProjectDisplay();
+        });
+    });
+
+    // Initial display
+    updateProjectDisplay();
+
+    // Add hover effect to load more button
+    loadMoreBtn.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+        this.style.boxShadow = '0 6px 20px rgba(0, 212, 255, 0.4)';
+    });
+
+    loadMoreBtn.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 4px 15px rgba(0, 212, 255, 0.3)';
+    });
+}
+
 // Error handling
 window.addEventListener('error', function(e) {
     console.error('JavaScript error:', e.error);
@@ -699,4 +822,5 @@ document.addEventListener('DOMContentLoaded', function() {
         link.setAttribute('rel', 'noopener noreferrer');
         }
     });
+    initProjectLoadMore();
 });

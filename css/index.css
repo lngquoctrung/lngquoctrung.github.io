@@ -2132,3 +2132,61 @@ body {
     left: 0;
     right: 0;
 }
+
+/* Load More Button Styles */
+.btn-load-more {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-load-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-load-more:hover::before {
+    left: 100%;
+}
+
+.btn-load-more:active {
+    transform: scale(0.98) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-load-more {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Projects grid - ensure proper spacing */
+.projects-grid {
+    margin-bottom: 0;
+}
+
+/* Animation for project cards */
+.project-card.hidden {
+    display: none !important;
+}
+
+.project-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
