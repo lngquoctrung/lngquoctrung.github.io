@@ -797,6 +797,53 @@ window.addEventListener('error', function(e) {
     showNotification('An error occurred. Please try again.', 'error');
 });
 
+// Fix hover on mobile - toggle overlay on tap
+function initMobileProjectInteraction() {
+    // Check if device is touch-enabled
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    if (!isTouchDevice) return;
+    
+    const projectImages = document.querySelectorAll('.project-image');
+    
+    projectImages.forEach(image => {
+        const overlay = image.querySelector('.project-overlay');
+        if (!overlay) return;
+        
+        let isOverlayVisible = false;
+        
+        image.addEventListener('click', function(e) {
+            const clickedLink = e.target.closest('.project-link');
+            
+            // If clicking on a link, let it work
+            if (clickedLink) {
+                return;
+            }
+            
+            // Otherwise, toggle overlay
+            e.preventDefault();
+            isOverlayVisible = !isOverlayVisible;
+            
+            if (isOverlayVisible) {
+                overlay.style.opacity = '1';
+                overlay.style.pointerEvents = 'auto';
+            } else {
+                overlay.style.opacity = '0';
+                overlay.style.pointerEvents = 'none';
+            }
+        });
+        
+        // Close overlay when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!image.contains(e.target) && isOverlayVisible) {
+                overlay.style.opacity = '0';
+                overlay.style.pointerEvents = 'none';
+                isOverlayVisible = false;
+            }
+        });
+    });
+}
+
 // Export functions for potential external use
 window.PortfolioAPI = {
     initParticles,
@@ -823,4 +870,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     initProjectLoadMore();
+    initMobileProjectInteraction();
 });
