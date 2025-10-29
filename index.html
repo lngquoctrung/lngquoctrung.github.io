@@ -73,7 +73,7 @@
                         <span class="typing-text"></span>
                     </h2>
                     <p class="hero-description">
-                        Junior AI/Data Engineer specializing in Machine Learning, Deep Learning, Computer Vision, and Data Engineering. Experienced in developing and optimizing AI/ML systems, with practical involvement in real-world projects. Passionate about building intelligent solutions to solve complex problems
+                        Junior AI/Data Engineer specializing in Machine Learning, Deep Learning, Computer Vision, and Data Engineering. Experienced in developing and optimizing AI/ML systems using Docker, VPS infrastructure, and modern MLOps practices, with practical involvement in real-world projects. Passionate about building intelligent solutions to solve complex problems
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn--primary">View My Work</a>
@@ -114,10 +114,19 @@
             <div class="about-content">
                 <div data-aos="fade-right">
                     <p class="about-description">
-                        My name is Ly Nguyen Quoc Trung, a Junior AI and Data Engineer with hands-on experience in image and video processing, machine learning model development, and data pipeline optimization. 
+                        My name is <strong>Ly Nguyen Quoc Trung</strong>, an AI and Data Engineer with demonstrated expertise in 
+                        developing and deploying production-ready machine learning systems. I specialize in Computer Vision, 
+                        Natural Language Processing, and end-to-end MLOps deployment.
                     </p>
                     <p class="about-description">
-                        I have successfully contributed to projects involving Computer Vision, Natural Language Processing, and data analysis systems. With a strong foundation in Python, PyTorch, TensorFlow, and related AI frameworks, I am dedicated to continuous learning and applying state-of-the-art AI technologies to create impactful solutions. Currently, I am seeking new opportunities to contribute my skills to innovative AI engineering roles.
+                        With hands-on experience in <strong>successful production deployments</strong>, I have mastered the complete 
+                        ML pipeline from research and development to production scaling with Docker containerization, VPS infrastructure, 
+                        nginx reverse proxy, and HTTPS security configuration.
+
+                        I have successfully delivered projects with outstanding results: <strong>33.38 BLEU score</strong> in 
+                        English-Vietnamese translation, <strong>90.11% accuracy</strong> in healthcare prediction with 450K+ samples, 
+                        and real-time systems handling production traffic. Currently seeking opportunities to contribute my 
+                        skills to innovative AI engineering roles.
                     </p>
                     
                     <div class="about-stats">
@@ -301,11 +310,11 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span class="skill-name">AWS</span>
-                                <span class="skill-percent">Beginner</span>
+                                <span class="skill-name">VPS</span>
+                                <span class="skill-percent">Advanced</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-percent="60"></div>
+                                <div class="skill-progress" data-percent="80"></div>
                             </div>
                         </div>
                         <div class="skill-item">
@@ -334,11 +343,121 @@
                 <button class="filter-btn" data-filter="nlp">NLP</button>
                 <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
                 <button class="filter-btn" data-filter="web-development">Web Development</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
             </div>
             
             <div class="projects-grid">
-                <!-- License Plate Recognition -->
-                <div class="project-card" data-category="computer-vision" data-aos="fade-up" data-aos-delay="200">
+                <!-- Real-time Chat Application -->
+                <div class="project-card" data-category="web-development" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://socketio-chat-app.qctrung.site" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/lngquoctrung/socketio-chat-app" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Development</span>
+                        <h3 class="project-title">Real-time Chat Application</h3>
+                        <p class="project-description">
+                            Production-ready real-time chat application with Socket.IO, featuring multiple authentication methods (local + Google OAuth 2.0), instant messaging, user status tracking, typing indicators, and persistent message history with MongoDB. Deployed with Docker on VPS with nginx and HTTPS.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Socket.IO</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Google OAuth 2.0</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Nginx</span>
+                            <span class="tech-tag">VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gemini RAG Chatbot Assistant -->
+                <div class="project-card" data-category="ai-ml" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://gemini-rag-bot-app.qctrung.site" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/lngquoctrung/gemini-rag-bot-app" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI/ML</span>
+                        <h3 class="project-title">Gemini RAG Chatbot Assistant</h3>
+                        <p class="project-description">
+                            Production-ready RAG chatbot using Google's Gemini AI with advanced vector database technology. Features semantic search with Qdrant, auto-reindexing, rate limiting, and multi-container architecture (Flask + Qdrant + Redis) deployed with Docker Compose.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Gemini AI</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Qdrant</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Docker Compose</span>
+                            <span class="tech-tag">VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- English-Vietnamese Machine Translation -->
+                <div class="project-card" data-category="nlp" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://translation.qctrung.site" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/lngquoctrung/machine-translation" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">NLP</span>
+                        <h3 class="project-title">English-Vietnamese Translation System</h3>
+                        <p class="project-description">
+                            State-of-the-art neural machine translation system using BiLSTM with Multi-Head Attention achieving 33.38 BLEU score. Features advanced optimization techniques including mixed precision (FP16), label smoothing, beam search decoding, and production-ready Gradio interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">BiLSTM</span>
+                            <span class="tech-tag">Multi-Head Attention</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Beam Search</span>
+                            <span class="tech-tag">Gradio</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle License Plate Recognition -->
+                <div class="project-card" data-category="computer-vision" data-aos="fade-up" data-aos-delay="500">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-car"></i>
@@ -356,15 +475,16 @@
                     </div>
                     <div class="project-content">
                         <span class="project-category">Computer Vision</span>
-                        <h3 class="project-title">License Plate Recognition System</h3>
+                        <h3 class="project-title">Vehicle License Plate Recognition</h3>
                         <p class="project-description">
-                            License plate recognition system from images and videos using FasterRCNN model. Applies Computer Vision and Deep Learning to detect and recognize license plates with high accuracy.
+                            Advanced license plate detection and recognition system using Faster R-CNN with fine-tuning on specialized dataset. Supports both image and video processing with real-time inference, confidence thresholding, and comprehensive evaluation on Kaggle P100 GPU.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FasterRCNN</span>
-                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Faster R-CNN</span>
                             <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Object Detection</span>
                             <span class="tech-tag">Gradio</span>
                             <span class="tech-tag">Docker</span>
                             <span class="tech-tag">VPS</span>
@@ -372,8 +492,8 @@
                     </div>
                 </div>
 
-                <!-- Diabetes Prediction -->
-                <div class="project-card" data-category="machine-learning" data-aos="fade-up" data-aos-delay="300">
+                <!-- Diabetes Prediction System -->
+                <div class="project-card" data-category="machine-learning" data-aos="fade-up" data-aos-delay="600">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-heartbeat"></i>
@@ -393,132 +513,98 @@
                         <span class="project-category">Machine Learning</span>
                         <h3 class="project-title">Diabetes Prediction System</h3>
                         <p class="project-description">
-                            Diabetes risk prediction system based on BRFSS 2017–2021 data, using Machine Learning models such as Random Forest, XGBoost, and LightGBM. Generalization ability assessment on BRFSS 2023 data.
+                            Advanced healthcare ML system using BRFSS 2017-2023 data (450K+ samples) with comprehensive data balancing techniques. Best performance: 90.11% accuracy with LightGBM + ADASYN + Tomek Links. Features 9 balancing methods, 6 ML algorithms, and interactive web dashboard.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LightGBM</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">SMOTE</span>
                             <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Matplotlib</span>
-                            <span class="tech-tag">Gradio</span>
+                            <span class="tech-tag">Streamlit</span>
                             <span class="tech-tag">Docker</span>
                             <span class="tech-tag">VPS</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Real-time Chat Application -->
-                <div class="project-card" data-category="web-development" data-aos="fade-up" data-aos-delay="400">
+                <!-- Pizza Counter System -->
+                <div class="project-card" data-category="computer-vision" data-aos="fade-up" data-aos-delay="700">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <i class="fas fa-comments"></i>
+                            <i class="fas fa-pizza-slice"></i>
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://chat-app.qctrung.site" class="project-link" title="View Live">
+                                <a href="https://pizza-counter-system-qctrung.streamlit.app" class="project-link" title="View Live">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://github.com/lngquoctrung/real-time-chat-with-socketio" class="project-link" title="View Code">
+                                <a href="https://github.com/lngquoctrung/pizzacountersystemyolo" class="project-link" title="View Code">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <span class="project-category">Web Development</span>
-                        <h3 class="project-title">Real-time Chat Application</h3>
+                        <span class="project-category">Computer Vision</span>
+                        <h3 class="project-title">Pizza Counter System</h3>
                         <p class="project-description">
-                            Full-featured real-time chat application with Socket.IO, supporting multiple authentication methods including local and Google OAuth 2.0. Features instant messaging, user status tracking, typing indicators, and persistent message history with MongoDB.
+                            Automated pizza detection and counting system using YOLOv11 with real-time video processing capabilities. Features comprehensive web dashboard, feedback system, and MongoDB integration for pizza tracking analytics.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Socket.IO</span>
-                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">YOLOv11</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Computer Vision</span>
                             <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">Google OAuth2.0</span>
-                            <span class="tech-tag">Docker-Compose</span>
-                            <span class="tech-tag">VPS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gemini RAG Chatbot Assistant -->
-                <div class="project-card" data-category="ai-ml" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://google-rag-chatbot.qctrung.site" class="project-link" title="View Live">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/lngquoctrung/gemini-llm-rag-chatbot" class="project-link" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">AI/ML</span>
-                        <h3 class="project-title">Gemini RAG Chatbot Assistant</h3>
-                        <p class="project-description">
-                            Web-based chatbot using Retrieval-Augmented Generation (RAG) with Google's Gemini AI. Features document-grounded responses, clean chat UI with Markdown support, and secure session management. Deployed with Docker for easy scaling.
-                        </p>
-                        <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Gemini AI</span>
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">Flask</span>
                             <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">VPS</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Machine Translation -->
-                <div class="project-card" data-category="nlp" data-aos="fade-up" data-aos-delay="600">
+                <!-- Image Captioning ResNet50-LSTM -->
+                <div class="project-card" data-category="computer-vision nlp" data-aos="fade-up" data-aos-delay="800">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <i class="fas fa-language"></i>
+                            <i class="fas fa-image"></i>
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://translation.qctrung.site/" class="project-link" title="View Live">
+                                <a href="comming-soon.html" class="project-link" title="Coming Soon">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://github.com/lngquoctrung/machine-translation" class="project-link" title="View Code">
+                                <a href="https://github.com/lngquoctrung/image-captioning-resnet50-lstm" class="project-link" title="View Code">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
+                        <span class="project-category">Computer Vision</span>
                         <span class="project-category">NLP</span>
-                        <h3 class="project-title">English-Vietnamese Translation System</h3>
+                        <h3 class="project-title">Image Captioning System</h3>
                         <p class="project-description">
-                            Machine translation system from English to Vietnamese using BiLSTM model with Attention mechanism. Built from scratch with sequence-to-sequence architecture for text translation.
+                            Automatic image captioning system using ResNet50 encoder for feature extraction and LSTM decoder for natural language generation. Trained on MS COCO dataset to generate descriptive captions for images.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">BiLSTM</span>
-                            <span class="tech-tag">Attention</span>
+                            <span class="tech-tag">ResNet50</span>
+                            <span class="tech-tag">LSTM</span>
                             <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">MS COCO</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Social Blog Platform -->
-                <div class="project-card" data-category="web-development" data-aos="fade-up" data-aos-delay="700">
+                <div class="project-card" data-category="web-development" data-aos="fade-up" data-aos-delay="900">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-blog"></i>
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="/comming-soon.html" class="project-link" title="View Live">
+                                <a href="comming-soon.html" class="project-link" title="Coming Soon">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                                 <a href="https://github.com/lngquoctrung/social-blogger" class="project-link" title="View Code">
@@ -531,88 +617,21 @@
                         <span class="project-category">Web Development</span>
                         <h3 class="project-title">Social Blog Platform</h3>
                         <p class="project-description">
-                            Social blog platform that allows users to create, share posts and interact. Built RESTful APIs, user management and real-time comment system.
+                            Full-stack social blogging platform enabling users to create, share posts and interact. Built with RESTful APIs, comprehensive user management system, and real-time comment functionality.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">Express</span>
                             <span class="tech-tag">MongoDB</span>
                             <span class="tech-tag">React</span>
+                            <span class="tech-tag">REST API</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Pizza Counting System -->
-                <div class="project-card" data-category="computer-vision" data-aos="fade-up" data-aos-delay="800">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-pizza-slice"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://pizza-counter-system-qctrung.streamlit.app/" class="project-link" title="View Live">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/lngquoctrung/pizza_counter_system_yolo" class="project-link" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <span class="project-category">Computer Vision</span>
-                        <h3 class="project-title">Pizza Counter System</h3>
-                        <p class="project-description">
-                            Automated pizza detection and counting system using YOLOv11 and Flask. Features real-time video processing, web dashboard, feedback system, and MongoDB integration for comprehensive pizza tracking.
-                        </p>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">YOLOv11</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Image Captioning ResNet50-LSTM -->
-                <div class="project-card" data-category="computer-vision nlp" data-aos="fade-up" data-aos-delay="900">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="/comming-soon.html" class="project-link" title="View Live">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/lngquoctrung/image-captioning-resnet50-lstm" class="project-link" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Computer Vision</span>
-                        <span class="project-category">NLP</span>
-                        <h3 class="project-title">Image Captioning</h3>
-                        <p class="project-description">
-                            Automatic image captioning system using ResNet50 encoder for feature extraction and LSTM decoder for caption generation. Trained on MS COCO dataset to generate natural language descriptions for images.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ResNet50</span>
-                            <span class="tech-tag">LSTM</span>
-                            <span class="tech-tag">TensorFlow</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
+
 
     <!-- Experience Section -->
     <section id="experience" class="section experience">
@@ -689,7 +708,14 @@
                 <div class="contact-info" data-aos="fade-right">
                     <h3>Let's Work Together!</h3>
                     <p>
-                        I am always open to discussing new AI/ML projects, collaboration opportunities, or simply sharing about technology. Feel free to contact me!
+                        I am actively seeking new opportunities in <strong>AI Engineering</strong>, <strong>Machine Learning Engineering</strong>, 
+                        or <strong>Data Engineering</strong> roles. With proven experience in production deployments and 
+                        end-to-end ML systems, I'm ready to contribute to innovative AI solutions.
+                    </p>
+
+                    <p>
+                        Check out my <strong>live production applications</strong> and feel free to reach out for 
+                        collaboration opportunities or discussions about AI/ML projects.
                     </p>
                     
                     <div class="contact-item">
